@@ -12,3 +12,7 @@ body {
 .my-col {
     border: 3px dotted blue;
 }
+
+.inner-conts {
+    border: 1px dashed black;
+}

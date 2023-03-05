@@ -9,13 +9,92 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container my-container">
-        <div class="row my-row">
-            <div class="col-md-4 col-sm-6 my-col">
+    <div class="container-fluid my-container">
+        <div class="row align-items-center my-row">
+            <div class="col-lg-2 col-md-4 col-sm-12 my-col">
                 Row 1 col 1
+                <div class="row justify-content-center ">
+                    <div class="col-3 d-sm-none inner-conts">
+                        profile
+                    </div>
+                    <div class="col-6 d-sm-none inner-conts">
+                        current inbox
+                    </div>
+                    <div class="col-3 d-sm-none inner-conts">
+                        search
+                    </div>
+                    <div class="col-sm-12 d-none d-md-block inner-conts">
+                        Menu col only for >= md
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8 col-sm-6 my-col">
+            <div class="col-xl-3 col-lg-4 col-md-8 col-sm-12 my-col">
                 Row 1 col 2
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        message section
+                        <div class="col-md-12 d-none d-md-block inner-conts">
+                            Search bar
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search Mail" aria-label="Search Mail" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                              </div>
+                        </div>
+                        <div class="col-12">
+                            bbbbbbbbbbbbbbbbbbbb
+
+                            <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 d-none d-lg-block my-col">
+                Row 1 col 3
+                <div class="row">
+                    <div class="col-4 inner-conts">
+                        img
+                    </div>
+                    <div class="col-8 inner-conts">
+                        text
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 inner-conts">
+                        nav button thingies (align right)
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-12 inner-conts">
+                    message text area and send button
+                   </div> 
+                </div>
+                <div class="row">
+                    <div class="col-4 inner-conts">
+                        attachment1
+                    </div>
+                    <div class="col-4 inner-conts">
+                        attachment2
+                    </div>
+                    <div class="col-4 inner-conts">
+                        attachment3
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row my-row">
