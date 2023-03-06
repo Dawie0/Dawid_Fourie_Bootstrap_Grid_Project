@@ -16,3 +16,11 @@ body {
 .inner-conts {
     border: 1px dashed black;
 }
+
+ .scroller-col {
+    max-height: 75vh;
+}
+
+.cont-height {
+    max-height: 100vh;
+}
