@@ -9,25 +9,53 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Container -->
     <div class="container-fluid my-container cont-height">
+        <!-- Main Row -->
         <div class="row align-items-center my-row ">
+            <!-- Main Column 1 -->
             <div class="col-xl-1 col-lg-2 col-md-4 col-sm-12 my-col">
                 Row 1 col 1
-                <div class="row justify-content-center ">
-                    <div class="col-3 d-sm-none inner-conts">
-                        profile
+                <!-- Mobile Header -->
+                <div class="row">
+                    <!-- Column with Profile image -->
+                    <div class="col-2 d-sm-none d-flex justify-content-center align-items-center inner-conts">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                          </svg>
                     </div>
-                    <div class="col-6 d-sm-none inner-conts">
-                        current inbox
+                    <!-- Column with Collapsable Link for menu -->
+                    <div class="col-5 d-sm-none d-flex justify-content-center align-items-center inner-conts">
+                        <!-- Offcanvas menu for mobile -->
+                        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Inbox</a>
+                        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                ...
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="col-3 d-sm-none inner-conts">
-                        search
+                    <!-- Column with Search Bar -->
+                    <div class="col-5 d-sm-none d-flex justify-content-center align-items-center inner-conts">
+                        
+                            <input type="text" class="form-control visually-hi dden" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button type="button" class="btn btn-outline-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg></button>
+
                     </div>
                     <div class="col-sm-12 d-none d-md-block inner-conts">
                         Menu col only for >= md
                     </div>
                 </div>
             </div>
+
+            <!-- Main column 2 -->
             <div class="col-xl-3 col-lg-4 col-md-8 col-sm-12 my-col">
                 Row 1 col 2
                 <div class="row justify-content-center">
@@ -59,6 +87,111 @@
                                 </div>
                               </div>
                               
+                              <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card mb-3" >
+                                <div class="row g-1 align-items-center">
+                                  <div class="col-sm-2 col-md-3 align-self-center">
+                                    <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
+                                  </div>
+                                  <div class="col-sm-5 col-md-8">
+                                    <div class="card-body">
+                                      <h5 class="card-title ">Dwight S.</h5>
+                                      <p class="card-text">Company Snack Situation</p>
+                                      <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
                               <div class="card mb-3" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
