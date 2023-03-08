@@ -26,3 +26,22 @@ body {
     max-height: 100vh;
 }
 
+.scroller-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+.card-height {
+    height: 55vh;
+    max-height: 55vh;
+}
+
+.att-height {
+    height: 15vh;
+}
+.small-fontsize {
+    font-size: xx-small;
+}
+
+.full-height {
+    height: 89vh;
+}
