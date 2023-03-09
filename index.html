@@ -17,7 +17,7 @@
             <div class="col-xl-1 col-lg-2 col-md-4 col-sm-12 mcol1-bg">
                 
                 <!-- Mobile Header -->
-                <div class="row m-1">
+                <div class="row m-1 " >
                     <!-- Column with Profile image -->
                     <div class="col-2 d-sm-none d-flex justify-content-center align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -25,7 +25,7 @@
                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                           </svg>
                     </div>
-                    <!-- Column with Collapsable Link for menu -->
+                    <!-- Column with offcanvas menu -->
                     <div class="col-3 d-sm-none d-flex justify-content-center align-items-center">
                         <!-- Offcanvas menu for mobile -->
                         <a id="mobile_menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Inbox</a>
@@ -35,6 +35,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body ">
+                                <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('All')">All</a></div>
                                 <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Inbox')">Inbox</a></div>
                                 <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Sent')">Sent</a></div>
                                 <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Drafts')">Drafts</a></div>
@@ -58,6 +59,7 @@
                     
                     <!-- Column for mailbox menu only for screens wider than -sm -->
                     <div class="col-12 d-none d-md-block grid gap-0 row-gap-3 ">
+                        <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('All')">All</a></div>
                         <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Inbox')">Inbox</a></div>
                         <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Sent')">Sent</a></div>
                         <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Drafts')">Drafts</a></div>
@@ -84,15 +86,15 @@
                         <div class="col-md-12 d-none d-md-block">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Search Mail" aria-label="Search Mail" aria-describedby="button-addon2">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <button class="btn btn-outline-primary" type="button" id="button-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                   </svg></button>
                               </div>
                         </div>
-                        <div class="col-12 overflow-y-scroll scroller-col scroller-hide">
+                        <div class="col-lg-12 col-md-12 col-sm-12 overflow-y-scroll scroller-col scroller-hide">
                           <!-- Message cards -->
                           
-                            <div class="card mb-3 email-hover" >
+                            <div class="card mb-3 email-hover" id="m1" onclick="selectMessage(0)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -107,7 +109,7 @@
                                 </div>
                               </div>
                               
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m2" onclick="selectMessage(1)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -122,7 +124,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m3" onclick="selectMessage(2)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -137,7 +139,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m4" onclick="selectMessage(3)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -152,7 +154,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m5" onclick="selectMessage(4)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -167,7 +169,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m6" onclick="selectMessage(5)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -182,7 +184,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m7" onclick="selectMessage(6)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -197,7 +199,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m8" onclick="selectMessage(7)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -212,7 +214,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m9" onclick="selectMessage(8)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -227,7 +229,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m10" onclick="selectMessage(9)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -242,7 +244,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m11" onclick="selectMessage(10)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -257,7 +259,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m12" onclick="selectMessage(11)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -272,7 +274,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3 email-hover" >
+                              <div class="card mb-3 email-hover" id="m13" onclick="selectMessage(12)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -298,13 +300,7 @@
                 <!-- Email sender details header (screens -lg and up) -->
                 <div class="row m-1 header-tab">
 
-                  <!-- Profile image -->
-                    <div class="col-4 d-flex justify-content-center align-items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                        </svg>
-                    </div>
+                  
 
                     <!-- Subject and Email Address -->
                     <div class="col-8 align-self-center">
@@ -312,7 +308,7 @@
                           <h3>Email Subject</h3>
                         </div>
                         <div class="col-12">
-                          <p>Emailaddress@something.com</p>
+                          <p>To: <strong class="email-address">Emailaddress@something.com</strong></p>
                         </div>
                     </div>
                 </div>
