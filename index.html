@@ -10,36 +10,36 @@
 </head>
 <body>
     <!-- Container -->
-    <div class="container-fluid my-container cont-height">
+    <div class="container-fluid full-height bg-orange">
         <!-- Main Row -->
-        <div class="row align-items-center my-row ">
+        <div class="row align-items-center full-height-p">
             <!-- Main Column 1 -->
-            <div class="col-xl-1 col-lg-2 col-md-4 col-sm-12 my-col">
-                Row 1 col 1
+            <div class="col-xl-1 col-lg-2 col-md-4 col-sm-12 mcol1-bg">
+                
                 <!-- Mobile Header -->
-                <div class="row">
+                <div class="row m-1">
                     <!-- Column with Profile image -->
-                    <div class="col-2 d-sm-none d-flex justify-content-center align-items-center inner-conts">
+                    <div class="col-2 d-sm-none d-flex justify-content-center align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                           </svg>
                     </div>
                     <!-- Column with Collapsable Link for menu -->
-                    <div class="col-3 d-sm-none d-flex justify-content-center align-items-center inner-conts">
+                    <div class="col-3 d-sm-none d-flex justify-content-center align-items-center">
                         <!-- Offcanvas menu for mobile -->
-                        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Inbox</a>
-                        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                        <a id="mobile_menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Inbox</a>
+                        <div class="offcanvas offcanvas-top offcanvas-bg" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasTopLabel">Menu</h5>
+                                <h5 class="offcanvas-title " id="offcanvasTopLabel">Menu</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body ">
-                                <div class="col-12"><a>Inbox</a></div>
-                                <div class="col-12"><a>Sent</a></div>
-                                <div class="col-12"><a>Drafts</a></div>
-                                <div class="col-12"><a>Spam</a></div>
-                                <div class="col-12"><a>Trash</a></div>
+                                <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Inbox')">Inbox</a></div>
+                                <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Sent')">Sent</a></div>
+                                <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Drafts')">Drafts</a></div>
+                                <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Spam')">Spam</a></div>
+                                <div class="col-12 email-menu-hover"><a onclick="changeCurrentMailboxText('Trash')">Trash</a></div>
                                 <div class="col-12">
                                   <button type="button" class="btn btn-primary">Compose</button>
                                 </div>
@@ -48,20 +48,21 @@
                     </div>
 
                     <!-- Column with Search Bar -->
-                    <div class="col-7 d-sm-none d-flex justify-content-center align-items-center inner-conts">
+                    <div class="col-7 d-sm-none d-flex justify-content-center align-items-center">
                         
                             <input type="text" class="form-control visually-hidden search-bar-mobile" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button type="button" class="btn btn-outline-dark" onclick="searchAnim()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <button type="button" class="btn btn-outline-primary" onclick="searchAnim()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                               </svg></button>
                     </div>
+                    
                     <!-- Column for mailbox menu only for screens wider than -sm -->
-                    <div class="col-12 d-none d-md-block inner-conts grid gap-0 row-gap-3 ">
-                        <div class="col-12 d-flex p-2 justify-content-center align-items-center"><a onclick="changeCurrentMailboxText('Inbox')">Inbox</a></div>
-                        <div class="col-12 d-flex p-2 justify-content-center align-items-center"><a onclick="changeCurrentMailboxText('Sent')">Sent</a></div>
-                        <div class="col-12 d-flex p-2 justify-content-center align-items-center"><a onclick="changeCurrentMailboxText('Drafts')">Drafts</a></div>
-                        <div class="col-12 d-flex p-2 justify-content-center align-items-center"><a onclick="changeCurrentMailboxText('Spam')">Spam</a></div>
-                        <div class="col-12 d-flex p-2 justify-content-center align-items-center"><a onclick="changeCurrentMailboxText('Trash')">Trash</a></div>
+                    <div class="col-12 d-none d-md-block grid gap-0 row-gap-3 ">
+                        <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Inbox')">Inbox</a></div>
+                        <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Sent')">Sent</a></div>
+                        <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Drafts')">Drafts</a></div>
+                        <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Spam')">Spam</a></div>
+                        <div class="col-12 d-flex p-2 justify-content-center align-items-center email-menu-hover"><a onclick="changeCurrentMailboxText('Trash')">Trash</a></div>
                         <div class="col-12 d-flex p-2 justify-content-center align-items-center">
                           <button type="button" class="btn btn-primary">Compose</button>
                         </div>
@@ -70,8 +71,8 @@
             </div>
 
             <!-- Main column 2 -->
-            <div class="col-xl-3 col-lg-4 col-md-8 col-sm-12 my-col">
-                Row 1 col 2
+            <div class="col-xl-3 col-lg-4 col-md-8 col-sm-12 full-height-p mcol2-bg">
+
                 <!-- Current Mailbox -->
                 <div class="col-12 d-flex justify-content-center align-items-center">
                   <h4 class="Current-Mailbox">Inbox</h4>
@@ -90,7 +91,8 @@
                         </div>
                         <div class="col-12 overflow-y-scroll scroller-col scroller-hide">
                           <!-- Message cards -->
-                            <div class="card mb-3" >
+                          
+                            <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -105,7 +107,7 @@
                                 </div>
                               </div>
                               
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -120,7 +122,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -135,7 +137,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -150,7 +152,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -165,7 +167,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -180,7 +182,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -195,7 +197,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -210,7 +212,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -225,7 +227,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -240,7 +242,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -255,7 +257,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -270,7 +272,7 @@
                                 </div>
                               </div>
 
-                              <div class="card mb-3" >
+                              <div class="card mb-3 email-hover" >
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
                                     <img src="user.svg" class="img-fluid center-block offset-md-4 d-none d-sm-block" alt="user image">
@@ -291,23 +293,23 @@
                 </div>
             </div>
             <!-- Main Column 3 -->
-            <div class="col-xl-8 col-lg-6 d-none d-lg-block my-col cont-height full-height">
-                Row 1 col 3
+            <div class="col-xl-8 col-lg-6 d-none d-lg-block full-height-p mcol3-bg">
+                
                 <!-- Email sender details header (screens -lg and up) -->
-                <div class="row">
+                <div class="row m-1 header-tab">
 
                   <!-- Profile image -->
-                    <div class="col-4 d-flex justify-content-center align-items-center inner-conts">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <div class="col-4 d-flex justify-content-center align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                           <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                           <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                         </svg>
                     </div>
 
                     <!-- Subject and Email Address -->
-                    <div class="col-8 inner-conts">
-                        <div class="col-12">
-                          <h4>Email Subject</h4>
+                    <div class="col-8 align-self-center">
+                        <div class="col-12 ">
+                          <h3>Email Subject</h3>
                         </div>
                         <div class="col-12">
                           <p>Emailaddress@something.com</p>
@@ -316,9 +318,9 @@
                 </div>
 
                 <!-- Nav buttons for reply, reply all, forward and delete -->
-                <div class="row justify-content-start">
+                <div class="row d-flex justify-content-end m-1 button-group ">
                   <!-- Buttons - group -->
-                    <div class="col-12 inner-conts ">
+                    <div class="col-xxl-5 col-xl-1 col-lg-9 align-self-center ">
                       <div class="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" class="btn btn-outline-primary">Reply</button>
                         <button type="button" class="btn btn-outline-primary">Reply all</button>
@@ -329,9 +331,9 @@
                 </div>
 
                 <!-- Email text area -->
-                <div class="row">
-                   <div class="col-12 inner-conts">
-                    <div class="card card-height">
+                <div class="row message-cont">
+                   <div class="col-12">
+                    <div class="card full-height-p">
                       <div class="card-body">
                         Dear [Name],<br>
 
@@ -346,9 +348,9 @@
                 </div>
 
                 <!-- Attachment section -->
-                <div class="row small-fontsize att-height">
-                    <div class="col-4 inner-conts">
-                        attachment1
+                <div class="row mt-2 small-fontsize att-height">
+                    <div class="col-4">
+                        
                         <div class="card col-12">
                           <div class="card-body">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
@@ -362,8 +364,8 @@
                           </div>
                         </div>
                     </div>
-                    <div class="col-4 inner-conts">
-                        attachment2
+                    <div class="col-4">
+                        
                         <div class="card col-12">
                           <div class="card-body">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-image" viewBox="0 0 16 16">
@@ -377,8 +379,8 @@
                           </div>
                         </div>
                     </div>
-                    <div class="col-4 inner-conts">
-                        attachment3
+                    <div class="col-4">
+                        
                         <div class="card col-12">
                           <div class="card-body">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
@@ -394,6 +396,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     
