@@ -15,6 +15,9 @@ body {
 .message-cont {
     height: 63%;
 }
+.email-text-area {
+    height: 95%;
+}
 .att-height {
     height: 10%;
 }
@@ -28,6 +31,17 @@ body {
 }
 .full-height-p {
     height: 100%;
+}
+.email-details {
+    height: 25%;
+}
+.email-text-p {
+    height: 69%;
+}
+.email-text-footer {
+    height: 6%;
+    border-radius: 10px;
+    background-color: white;
 }
 
 /* Hide scrollbar */
@@ -79,3 +93,13 @@ body {
     filter: blur(1px);
     opacity: 0.6;
   }
+
+.my-container {
+    border: 1px solid green;
+}
+.my-row {
+    border: 1px solid red;
+}
+.my-col {
+    border: 1px solid black;
+}

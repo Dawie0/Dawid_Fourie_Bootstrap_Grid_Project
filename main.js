@@ -35,5 +35,10 @@ const selectMessage = (number) => {
     }
 }
 
+/* Function to switch between pages */
+const changePage = (page) => {
+    document.location = `${page}.html`
+  }
+
 /* Calling 'selectMessage' function to start off with first message selected */
 selectMessage(0);
