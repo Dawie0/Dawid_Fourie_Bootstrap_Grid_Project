@@ -2,46 +2,27 @@ body {
     background-color: #FEAA06;
 }
 
-
+/* Setting heights for different sections */
  .scroller-col {
-    max-height: 88vh;
-    
+    max-height: 88vh;   
 }
-
 .cont-height {
     max-height: 100vh;
 }
-
-.scroller-hide::-webkit-scrollbar {
-    display: none;
-  }
-
-.card-height {
-    font-size: smaller;
+.button-group {
+    height: 6%;
 }
-
+.message-cont {
+    height: 63%;
+}
+.att-height {
+    height: 10%;
+}
 .header-tab {
     height: 12%;
     border-radius: 10px;
     background-color: white;
 }
-
-.button-group {
-    height: 6%;
-}
-
-.message-cont {
-    height: 63%;
-}
-
-.att-height {
-    height: 10%;
-}
-
-.small-fontsize {
-    font-size: xx-small;
-}
-
 .full-height {
     height: 100vh;
 }
@@ -49,37 +30,47 @@ body {
     height: 100%;
 }
 
-.mcol3-bg {
-    background-color: #D3D3D3;
+/* Hide scrollbar */
+.scroller-hide::-webkit-scrollbar {
+    display: none;
+}
+.header-tab {
+    height: 12%;
+    border-radius: 10px;
+    background-color: white;
 }
 
+/* Font sizes */
+.small-fontsize {
+    font-size: xx-small;
+}
+
+/* Background colors */
 .mcol2-bg{
     background-color: #D3D3D3;
 }
-
 .mcol1-bg {
    color: white; 
 }
-
-.email-hover:hover {
-    color: #FEAA06;
-    cursor: pointer;
-}
-
-.email-menu-hover:hover {
-    color: black;
-    cursor: pointer;
-}
-
-#mobile_menu {
-    cursor: pointer;
-}
-
 .offcanvas-bg {
     background-color: #FEAA06;
     color: white;
 }
 
+/* Hover effects */
+.email-hover:hover {
+    color: #FEAA06;
+    cursor: pointer;
+}
+.email-menu-hover:hover {
+    color: black;
+    cursor: pointer;
+}
+#mobile_menu {
+    cursor: pointer;
+}
+
+/* Blur for email cards not selected */
 .blur{
     -webkit-filter: blur(1px);
     -moz-filter: blur(1px);
