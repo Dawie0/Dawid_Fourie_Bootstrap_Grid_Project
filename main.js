@@ -13,7 +13,7 @@ const searchAnim = () => {
     }
 };
 
-/* Function to similate switching to a different mailbox */
+/* Function to simulate switching to a different mailbox */
 const changeCurrentMailboxText = (mailbox) => {
     currentMailboxText.innerHTML = mailbox;
 }

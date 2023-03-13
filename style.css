@@ -58,6 +58,10 @@ body {
 .small-fontsize {
     font-size: xx-small;
 }
+.link-font {
+    font-size: larger;
+    line-height: 20px;
+}
 
 /* Background colors */
 .mcol2-bg{
@@ -93,13 +97,3 @@ body {
     filter: blur(1px);
     opacity: 0.6;
   }
-
-.my-container {
-    border: 1px solid green;
-}
-.my-row {
-    border: 1px solid red;
-}
-.my-col {
-    border: 1px solid black;
-}
