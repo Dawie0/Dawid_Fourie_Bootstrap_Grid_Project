@@ -21,7 +21,7 @@
                 <div class="row m-1 " >
 
                     <!-- Column with Profile image -->
-                    <div class="col-2 d-sm-none d-flex justify-content-center align-items-center">
+                    <div class="col-2 d-flex d-md-none  justify-content-center align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -29,7 +29,7 @@
                     </div>
                     
                     <!-- Column with offcanvas menu -->
-                    <div class="col-3 d-sm-none d-flex justify-content-center align-items-center">
+                    <div class="col-3 d-flex d-md-none  justify-content-center align-items-center">
                         <!-- Offcanvas menu for mobile -->
                         <a id="mobile_menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Inbox</a>
                         <div class="offcanvas offcanvas-top offcanvas-bg" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -47,12 +47,15 @@
                                 <div class="col-12">
                                   <button type="button" class="btn btn-primary" onclick="changePage('compose')">Compose</button>
                                 </div>
+                                <div class="col-12">
+                                  <button type="button" class="btn btn-primary d-none d-md-block sm-b-button" onclick="returnToNormal()">Back</button>
+                                </div>
                             </div>
                         </div> 
                     </div>
 
                     <!-- Column with Search Bar -->
-                    <div class="col-7 d-sm-none d-flex justify-content-center align-items-center">
+                    <div class="col-7 d-flex d-md-none  justify-content-center align-items-center">
                         
                             <input type="text" class="form-control visually-hidden search-bar-mobile" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button type="button" class="btn btn-outline-primary" onclick="searchAnim()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -71,19 +74,22 @@
                         <div class="col-12 d-flex p-2 justify-content-center align-items-center">
                           <button type="button" class="btn btn-primary" onclick="changePage('compose')">Compose</button>
                         </div>
+                        <div class="col-12 d-flex p-2 justify-content-center align-items-center">
+                          <button type="button" class="btn btn-primary d-lg-none md-b-button" onclick="returnToNormal()">Back</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Main column 2 -->
-            <div class="col-lg-3 col-md-9 col-sm-12 full-height-p mcol2-bg">
+            <div class="col-lg-3 col-md-9 col-sm-12 full-height-p mcol2-bg main-col-2 ">
 
                 <!-- Current Mailbox -->
                 <div class="col-12 d-flex justify-content-center align-items-center">
                   <h4 class="Current-Mailbox">Inbox</h4>
                 </div>
                 <!-- Message Section -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center ">
                     <div class="col-md-12">
                       <!-- Search bar for screens wider than -sm -->
                         <div class="col-md-12 d-none d-md-block">
@@ -100,15 +106,15 @@
                             <div class="card mb-3 email-hover" id="m0" onclick="selectMessage(0)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t0">Dwight S.</h5>
+                                      <p class="card-text s0">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -118,15 +124,15 @@
                               <div class="card mb-3 email-hover" id="m1" onclick="selectMessage(1)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t1">Dwight S.</h5>
+                                      <p class="card-text s1">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -136,15 +142,15 @@
                               <div class="card mb-3 email-hover" id="m2" onclick="selectMessage(2)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t2">Dwight S.</h5>
+                                      <p class="card-text s2">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -154,15 +160,15 @@
                               <div class="card mb-3 email-hover" id="m3" onclick="selectMessage(3)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t3">Dwight S.</h5>
+                                      <p class="card-text s3">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -172,15 +178,15 @@
                               <div class="card mb-3 email-hover" id="m4" onclick="selectMessage(4)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t4">Dwight S.</h5>
+                                      <p class="card-text s4">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -190,15 +196,15 @@
                               <div class="card mb-3 email-hover" id="m5" onclick="selectMessage(5)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t5">Dwight S.</h5>
+                                      <p class="card-text s5">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -208,15 +214,15 @@
                               <div class="card mb-3 email-hover" id="m6" onclick="selectMessage(6)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t6">Dwight S.</h5>
+                                      <p class="card-text s6">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -226,15 +232,15 @@
                               <div class="card mb-3 email-hover" id="m7" onclick="selectMessage(7)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t7">Dwight S.</h5>
+                                      <p class="card-text s7">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -244,15 +250,15 @@
                               <div class="card mb-3 email-hover" id="m8" onclick="selectMessage(8)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t8">Dwight S.</h5>
+                                      <p class="card-text s8">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -262,15 +268,15 @@
                               <div class="card mb-3 email-hover" id="m9" onclick="selectMessage(9)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t9">Dwight S.</h5>
+                                      <p class="card-text s9">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -280,15 +286,15 @@
                               <div class="card mb-3 email-hover" id="m10" onclick="selectMessage(10)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t10">Dwight S.</h5>
+                                      <p class="card-text s10">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -298,15 +304,15 @@
                               <div class="card mb-3 email-hover" id="m11" onclick="selectMessage(11)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t11">Dwight S.</h5>
+                                      <p class="card-text s11">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -316,15 +322,15 @@
                               <div class="card mb-3 email-hover" id="m12" onclick="selectMessage(12)">
                                 <div class="row g-1 align-items-center">
                                   <div class="col-sm-2 col-md-3 align-self-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-sm-block" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-circle img-fluid center-block offset-md-4 d-none d-md-block" viewBox="0 0 16 16">
                                       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                                       <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                     </svg>
                                   </div>
                                   <div class="col-sm-5 col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title ">Dwight S.</h5>
-                                      <p class="card-text">Company Snack Situation</p>
+                                      <h5 class="card-title t12">Dwight S.</h5>
+                                      <p class="card-text s12">Company Snack Situation</p>
                                       <p class="card-text"><small class="text-muted">Received 8:15 - 3/5</small></p>
                                     </div>
                                   </div>
@@ -338,7 +344,7 @@
             </div>
 
             <!-- Main Column 3 -->
-            <div class="col-lg-7 d-none d-lg-block full-height-p mcol2-bg">
+            <div class="col-lg-7 d-none d-lg-block full-height-p mcol2-bg main-col-3">
                 
                 <!-- Email sender details header (screens -lg and up) -->
                 <div class="row m-1 header-tab">
@@ -346,10 +352,10 @@
                     <!-- Subject and Email Address -->
                     <div class="col-8 align-self-center">
                         <div class="col-12 ">
-                          <h3>Email Subject</h3>
+                          <h4 class="big-subject">Email Subject</h4>
                         </div>
                         <div class="col-12">
-                          <p>To: <strong class="email-address">Emailaddress@something.com</strong></p>
+                          <p>To: <strong class="email-address">Emailaddress</strong><strong>@dundermifflin.com</strong></p>
                         </div>
                     </div>
                 </div>
@@ -357,7 +363,7 @@
                 <!-- Button group for reply, reply all, forward and delete -->
                 <div class="row d-flex justify-content-start ms-1 button-group ">
                   <!-- Buttons - group -->
-                    <div class="col-xl-5 col-lg-9 align-self-center ">
+                    <div class=" col-lg-9 align-self-center ">
                       <div class="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" class="btn btn-outline-primary">Reply</button>
                         <button type="button" class="btn btn-outline-primary">Reply all</button>

@@ -97,9 +97,3 @@ body {
     filter: blur(1px);
     opacity: 0.6;
   }
-
-
-.test {
-    border: 1px solid black;
-    z-index: 10;
-}
